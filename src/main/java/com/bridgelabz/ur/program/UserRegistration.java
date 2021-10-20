@@ -1,6 +1,6 @@
 /**
  * User need to follow pre-defined password rules.
- *Rules3- Should have at least 1 numeric number in the password .
+ *Rules4- Has exactly 1 Special Character .
  * 
  * @author: Navya Shree
  * @since: 20.10.2021
@@ -59,8 +59,8 @@ public class UserRegistration {
 
 	// validate given password
 	public static void password() {
-		String password = "aBcd#123";
-		String regex = "(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%^&-+=()]).{8,}";
+		String password = "abCd$123";
+		String regex = "^(?=.*[0-9])(?=[^@#$%^&+=]*[@#$%^&+=][^@#$%^&+=]*$)(?=.*[a-z])(?=.*[A-Z]).{8,}$";
 		boolean result = password.matches(regex);
 		if (result) {
 			System.out.println("Given password is valid");
