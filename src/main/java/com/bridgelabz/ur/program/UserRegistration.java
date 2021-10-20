@@ -1,6 +1,8 @@
 /**
- * Valid Last Name with first letter starting with capital and has minimum 3 characters in it.
- *
+ * check valid Email
+ * EX:- ac.xyz@bl.co.in
+ * Email has 3 mandatory parts (abc,bl & co) annd 2 optional (xyz & in) with precise @ and . positions .
+ * 
  * @author: Navya Shree
  * @since: 20.10.2021
  */
