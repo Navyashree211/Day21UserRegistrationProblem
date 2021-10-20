@@ -1,6 +1,6 @@
 /**
-* User need to follow pre-defined password rules.
- * Rules1- minimum 8 characters
+ * User need to follow pre-defined password rules.
+ *Rules2- Should have at least 1 upper case.
  * 
  * @author: Navya Shree
  * @since: 20.10.2021
@@ -45,21 +45,22 @@ public class UserRegistration {
 	}
 
 	// validate given phone number
-	public static void phoneNumber() {
+	public static void phoneNumber()  {
 		String phone = "91 9919819801";
-		String regex = "[0-9]{2}[%s][0-9]{10}";
+		String regex = "[0-9]{2}[\s][0-9]{10}";
 		boolean result = phone.matches(regex);
-		if (result) {
+		if(result)  {
 			System.out.println("Given phone number is valid");
-		} else {
+		}
+		else  {
 			System.out.println("Given phone number is not valid ");
 		}
 	}
 
 	// validate given password
 	public static void password() {
-		String password = "abcd#123";
-		String regex = "[A-Za-z0-9@_#$%!]{8,}";
+		String password = "aBcd#123";
+		String regex = "(?=.*[A-Z])[A-Za-z0-9@_#$%!]{8,}";
 		boolean result = password.matches(regex);
 		if (result) {
 			System.out.println("Given password is valid");
