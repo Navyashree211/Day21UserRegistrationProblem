@@ -1,11 +1,3 @@
-/**
- * Regular expression for Email validation.
- *
- * 
- * @author: Navya Shree
- * @since: 20.10.2021
- */
-
 package com.bridgelabz.ur.test.programs;
 
 import org.junit.Before;
@@ -20,16 +12,22 @@ import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Performing test cases for Email validation.
+ * 
+ * @author Chaitra NS
+ * @date 03-08-2021
+ */
+
 @RunWith(Parameterized.class)
 public class EmailTest {
-
 	private String emailTest;
 	private boolean expectedResult;
 	private UserRegistration validateEmail;
 
-	public EmailTest(String email, boolean expextedResult) {
+	public EmailTest(String email, boolean expectedResult) {
 		this.emailTest = email;
-		this.expectedResult = expextedResult;
+		this.expectedResult = expectedResult;
 	}
 
 	@Before
@@ -53,5 +51,4 @@ public class EmailTest {
 	public void givenEmailAsVar_ShouldReturnTrueorFalse() {
 		assertEquals(expectedResult, validateEmail.validateEmail(emailTest));
 	}
-
 }
