@@ -1,7 +1,7 @@
 /**
- * check valid Email
- * EX:- ac.xyz@bl.co.in
- * Email has 3 mandatory parts (abc,bl & co) annd 2 optional (xyz & in) with precise @ and . positions .
+  * User need to follow pre-defiend Mobile Format .
+ * Ex:-91 9919819801
+ * country code follow by space and 10 digit number .
  * 
  * @author: Navya Shree
  * @since: 20.10.2021
@@ -18,6 +18,7 @@ public class UserRegistration {
 		System.out.println(lastName("Sha"));
 
 		email();
+		phoneNumber();
 	}
 
 	// validate first name
@@ -41,6 +42,17 @@ public class UserRegistration {
 		} else {
 			System.out.println("Given email-id is not valid");
 		}
+	}
 
+	// validate given phone number
+	public static void phoneNumber() {
+		String phone = "91  9919819801";
+		String regex = "[0-9]{2}[%s][0-9]{10}";
+		boolean result = phone.matches(regex);
+		if (result) {
+			System.out.println("Given phone number is valid");
+		} else {
+			System.out.println("Given phone number is not valid ");
+		}
 	}
 }
