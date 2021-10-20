@@ -1,3 +1,10 @@
+/**
+ * Performing test cases for Email validation.
+ * 
+ * @author Navaya Shree
+ * @date 20-10-2021
+ */
+
 package com.bridgelabz.ur.test.programs;
 
 import org.junit.Before;
@@ -11,13 +18,6 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
-
-/**
- * Performing test cases for Email validation.
- * 
- * @author Chaitra NS
- * @date 03-08-2021
- */
 
 @RunWith(Parameterized.class)
 public class EmailTest {
